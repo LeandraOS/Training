@@ -19,7 +19,7 @@ for i in range(qtd_formulas):
     clausulas = input().lower().split("&")
     for j in range (len(clausulas)):
         atomos = clausulas[j].replace("(","").replace(")","").split("|")
-    if ehValida(atomos) == True:
+    if ehValida(atomos):
         print("eh valida")
     else:
         print("não eh válida")
