@@ -1,1 +1,1 @@
-This repository was created to store programs written during the learning of the python language.
+This repository was created to store programs written in python.
