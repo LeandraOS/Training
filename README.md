@@ -1,2 +1,2 @@
 
-This repository was created to store programs written in the languages ​​I am learning.
+This repository was created to store programs written in the languages ​​i am learning.
