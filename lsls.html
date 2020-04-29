@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>IMC App</title>
+</head>
+<style>
+    header{
+        text-align:justify;
+        margin-left: 120px;
+    }
+    main{margin-left:120px ; }
+    footer{ 
+        margin-top: 100px;
+        border: 1px solid green;}
+    .imc{
+        color:black ;}
+    #button{
+        background: #1f5eaf;
+        position: relative;
+        margin-left: 70px;
+        margin-top: 15px;
+        padding: 13px 30px 8px 28px;
+        vertical-align: middle;
+        border: 0px;
+        font-family: inherit;
+        font-size: 15px;
+        color: whitesmoke;
+        text-align: center;
+        }
+        
+
+    </style>
+    <body>
+        <header>
+            <h1> Cálculo IMC</h1>
+        </header>
+        <main>
+            <p>Altura: <input id = "altura" type = "float"></p>
+            <p>Peso: <input id = "peso" type = "number" ></p>
+            <button id = "button"> Calcular </button>
+            <h2>IMC: <span class = "imc"></span></h2>
+        </main>
+        
+        <footer>Rodapé</footer>
+        <script src = "app.js"></script>
+    </body>
+    <!--ideias
+    1. colocar um texto explicando o que é o imc
+    2. colocar imagens, ao passar o mouse mudar essas imagens
+    3. colocar condicoes, dependendo do imc já mostra o imc e a mensagem para o usuario
+    dizendo em que grupo ele se encontra
+    4.formatar a saída com duas casas decimais
+    5. disparar alert's, se altura for vazia, se peso for vazio
+    só aceitar alturas com duas casas decimais
+    
+-->
+</html>
+
