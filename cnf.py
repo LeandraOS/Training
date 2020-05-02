@@ -16,11 +16,12 @@ clausulas = []
 atomos = set()
 
 for i in range(qtd_formulas):
-    clausulas = input().lower().split("&")
+    clausulas = input().replace(' ', '').lower().split("&")
     for j in range (len(clausulas)):
         atomos = clausulas[j].replace("(","").replace(")","").split("|")
     if ehValida(atomos):
         print("eh valida")
     else:
         print("não eh válida")
+
 
