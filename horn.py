@@ -3,7 +3,7 @@
 def separa_em_Atomos(formula):
   atomos = []
   for l in formula:
-    if (l.isalpha() and (l not in atomos)):
+    if l.isalpha() and (l not in atomos):
       atomos.append(l)
   return atomos;
 
@@ -19,12 +19,13 @@ def satisfazivel(formula):
   
   checado = False
   i = 0
+
   while(i < len(subformulas)):
     sem_implicacao = subformulas[i].split('->')
     atomos_da_esquerda = separa_em_Atomos(sem_implicacao[0])
 
-    if(set(atomos_da_esquerda).intersection(atomos_checados)):
-      if(sem_implicacao[1] not in atomos_checados):
+    if set(atomos_da_esquerda).intersection(atomos_checados):
+      if sem_implicacao[1] not in atomos_checados:
            atomos_checados.append(sem_implicacao[1])
            checado = True
 
@@ -33,11 +34,11 @@ def satisfazivel(formula):
 
     i+=1
     
-    if(checado and i >= len(subformulas)):
+    if checado and i >= len(subformulas):
       checado = False 
       i = 0
   
-  if ('F' in atomos_checados):
+  if 'F' in atomos_checados:
     satisfazivel = False
 
   return satisfazivel
@@ -46,7 +47,9 @@ qtd_entrada = int(input('Entradas: '))
 
 for i in range(qtd_entrada):
   formula = input('Formula ' + str(i + 1) + ': ')  
+
   if(satisfazivel(formula)):
-    print(str(i+1) + '. Satisfazível')
+    print(str(i+1) + '.Satisfazível')
+
   else:
-    print(str(i+1) + '. Insatisfazível')
+    print(str(i+1) + '.Insatisfazível')
