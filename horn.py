@@ -1,16 +1,52 @@
 #coding: utf-8
 
-atomos_separados = {}
+def separa_em_Atomos(formula):
+  atomos = []
+  for l in formula:
+    if (l.isalpha() and (l not in atomos)):
+      atomos.append(l)
+  return atomos;
 
-qtd_formulas = int(input())
-separada = list()
-false = "F"
+def satisfazivel(formula):  
+  satisfazivel = True
 
-for i in range(qtd_formulas):
-    formulas = input().replace(' ', '').lower().split("&")
-    if (false.lower() not in formulas):
-        print("{}.satisfazível".format(i + 1))
-    else:
-        for j in range(len(formulas)):
-            separada.append(formulas[j].replace("(","").replace(")",""))
-        #verificacao de quando a formula nao eh satisfazivel
+  if 'F' not in separa_em_Atomos(formula):
+    return satisfazivel
+
+  atomos_checados = ['T']
+  formula = formula.replace(' ', '')
+  subformulas = formula[1:len(formula)-1].split(')&(')
+  
+  checado = False
+  i = 0
+  while(i < len(subformulas)):
+    sem_implicacao = subformulas[i].split('->')
+    atomos_da_esquerda = separa_em_Atomos(sem_implicacao[0])
+
+    if(set(atomos_da_esquerda).intersection(atomos_checados)):
+      if(sem_implicacao[1] not in atomos_checados):
+           atomos_checados.append(sem_implicacao[1])
+           checado = True
+
+      else:
+        checado = False
+
+    i+=1
+    
+    if(checado and i >= len(subformulas)):
+      checado = False 
+      i = 0
+  
+  if ('F' in atomos_checados):
+    satisfazivel = False
+
+  return satisfazivel
+
+qtd_entrada = int(input('Entradas: '))
+
+for i in range(qtd_entrada):
+  formula = input('Formula ' + str(i + 1) + ': ')  
+  if(satisfazivel(formula)):
+    print(str(i+1) + '. Satisfazível')
+  else:
+    print(str(i+1) + '. Insatisfazível')
