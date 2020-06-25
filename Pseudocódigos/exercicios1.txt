@@ -1,0 +1,72 @@
+Algoritmo "Subtração"
+
+var 
+    numero1, numero2, resultado: real
+
+início
+
+    leia numero1, numero2
+    resultado <- numero1 - numero2
+    escreva resultado
+
+fim
+
+
+Algoritmo "Divisão"
+
+var 
+    numero1, numero2, resultado: real
+
+início
+    
+    leia numero1, numero2
+    resultado <- numero1/numero2
+    escreva resultado
+
+fim
+
+
+Algoritmo " Cálculo de média"
+
+var
+    nota1, nota2, nota3, resultado
+
+início
+    leia nota1, nota2, nota3
+    resultado <- (nota1 + nota2 + nota3)/3
+    escreva resultado
+
+fim
+
+
+Algoritmo "Desconto no preço do produto"
+
+var
+    preco, desconto, novoPreco: real
+
+início
+    leia preco
+    desconto <- preco * 10 / 100
+    novoPreco <- preco - desconto
+    escreva novoPreco
+
+fim
+
+
+Algoritmo "Salário a ser recebido"
+
+var
+    salarioBase, gratificacao, salarioGratificacao, imposto, salarioRecebido: real
+
+início
+    leia salarioBase
+
+    gratificacao <- salarioBase * 5/100
+    salarioGratificacao <- salarioBase + gratificacao
+    imposto <- salarioGratificacao * 7/100
+    salarioRecebido <- salarioGratificacao - imposto
+
+    escreva salarioRecebido
+
+fim
+
