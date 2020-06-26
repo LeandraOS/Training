@@ -6,7 +6,9 @@ var
 início
 
     leia numero1, numero2
+
     resultado <- numero1 - numero2
+    
     escreva resultado
 
 fim
@@ -20,7 +22,9 @@ var
 início
     
     leia numero1, numero2
+    
     resultado <- numero1/numero2
+    
     escreva resultado
 
 fim
@@ -33,7 +37,9 @@ var
 
 início
     leia nota1, nota2, nota3
+    
     resultado <- (nota1 + nota2 + nota3)/3
+    
     escreva resultado
 
 fim
@@ -46,8 +52,10 @@ var
 
 início
     leia preco
-    desconto <- preco * 10 / 100
+    
+    desconto <- preco *  0.1
     novoPreco <- preco - desconto
+    
     escreva novoPreco
 
 fim
@@ -61,9 +69,9 @@ var
 início
     leia salarioBase
 
-    gratificacao <- salarioBase * 5/100
+    gratificacao <- salarioBase * 0.05
     salarioGratificacao <- salarioBase + gratificacao
-    imposto <- salarioGratificacao * 7/100
+    imposto <- salarioGratificacao * 0.07
     salarioRecebido <- salarioGratificacao - imposto
 
     escreva salarioRecebido
