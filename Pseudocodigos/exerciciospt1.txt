@@ -1,7 +1,7 @@
 Algoritmo "Subtração"
 
 var 
-    numero1, numero2, resultado: real
+    numero1, numero2, resultado: inteiro
 
 início
 
@@ -17,7 +17,7 @@ fim
 Algoritmo "Divisão"
 
 var 
-    numero1, numero2, resultado: real
+    numero1, numero2, resultado: inteiro
 
 início
     
