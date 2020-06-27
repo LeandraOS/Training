@@ -36,7 +36,7 @@ fim
 Algoritmo "Calcula salário"
 
 var
-    horasTrabalhadas, valorSalario,: real
+    horasTrabalhadas, valorSalario, salarioBruto, imposto, salarioRecebido: real
 
 início
     leia horasTrabalhadas, valorSalario
@@ -54,7 +54,7 @@ fim
 Algoritmo "Calcula preço quilowatt"
 
 var 
-    valorSalario, qtdQuilowatt : real
+    valorSalario, qtdQuilowatt, valorPagar, valorPagarDesconto : real
 
 início
     

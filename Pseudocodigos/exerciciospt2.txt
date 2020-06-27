@@ -17,7 +17,7 @@ fim
 Algoritmo "Calcula média ponderada"
 
 var
-    nota1, nota2, nota3, peso1, peso2, peso3, calculoNotas, somaPesos,somaResultados, mediaPonderada
+    nota1, nota2, nota3, peso1, peso2, peso3, calculoNotas, somaPesos, mediaPonderada
 
 início
 
